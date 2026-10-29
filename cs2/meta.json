@@ -1,89 +1,105 @@
 {
-  "version": "2026.10-v0",
-  "updated": "2026-10-28",
-  "note": "Стартовые ориентиры для среднего tier-1 игрока. Это приблизительные значения: пересоберите их по свежим про-демкам командой tools/build_meta.py, тогда сюда попадут реальные цифры выбранных игроков и раскидки.",
-  "update_url": "https://raw.githubusercontent.com/asaribekian1-cell/coach-meta/main/cs2/meta.json",
-  "baseline": {
-    "rating": 1.0,
-    "adr": 78,
-    "kpr": 0.7,
-    "dpr": 0.66,
-    "hs_pct": 48,
-    "kast": 72,
-    "survival_pct": 34,
-    "opening_attempt_rate": 0.2,
+ "version": "2026.10-v0",
+ "updated": "2026-10-28",
+ "note": "Стартовые ориентиры для среднего tier-1 игрока. Это приблизительные значения: пересоберите их по свежим про-демкам командой tools/build_meta.py, тогда сюда попадут реальные цифры выбранных игроков и раскидки.",
+ "update_url": "https://raw.githubusercontent.com/asaribekian1-cell/coach-meta/main/cs2/meta.json",
+ "baseline": {
+  "rating": 1.0,
+  "adr": 78,
+  "kpr": 0.7,
+  "dpr": 0.66,
+  "hs_pct": 48,
+  "kast": 72,
+  "survival_pct": 34,
+  "opening_attempt_rate": 0.2,
+  "opening_win_pct": 50,
+  "traded_death_pct": 22,
+  "trade_kill_pct": 20,
+  "util_dmg_pr": 6,
+  "nades_pr": 1.6,
+  "enemies_flashed_pr": 0.35,
+  "team_flashes_pr": 0.08,
+  "early_death_pct": 18,
+  "multikill_rounds_pct": 18,
+  "clutch_win_pct": 25
+ },
+ "roles": {
+  "entry": {
+   "label": "Энтри",
+   "baseline": {
+    "opening_attempt_rate": 0.3,
     "opening_win_pct": 50,
-    "traded_death_pct": 22,
-    "trade_kill_pct": 20,
-    "util_dmg_pr": 6,
-    "nades_pr": 1.6,
-    "enemies_flashed_pr": 0.35,
-    "team_flashes_pr": 0.08,
-    "early_death_pct": 18,
-    "multikill_rounds_pct": 18,
-    "clutch_win_pct": 25
+    "survival_pct": 28,
+    "traded_death_pct": 30,
+    "early_death_pct": 30
+   }
   },
-  "roles": {
-    "entry": {
-      "label": "Энтри",
-      "baseline": {
-        "opening_attempt_rate": 0.3,
-        "opening_win_pct": 50,
-        "survival_pct": 28,
-        "traded_death_pct": 30,
-        "early_death_pct": 30
-      }
-    },
-    "awp": {
-      "label": "Снайпер",
-      "baseline": {
-        "opening_attempt_rate": 0.26,
-        "opening_win_pct": 58,
-        "hs_pct": 25,
-        "survival_pct": 40,
-        "util_dmg_pr": 3,
-        "nades_pr": 1.0
-      }
-    },
-    "support": {
-      "label": "Саппорт",
-      "baseline": {
-        "util_dmg_pr": 9,
-        "nades_pr": 2.2,
-        "enemies_flashed_pr": 0.5,
-        "opening_attempt_rate": 0.15
-      }
-    },
-    "lurker": {
-      "label": "Люркер",
-      "baseline": {
-        "traded_death_pct": 12,
-        "survival_pct": 38,
-        "opening_attempt_rate": 0.16,
-        "early_death_pct": 10
-      }
-    },
-    "igl": {
-      "label": "Капитан",
-      "baseline": {
-        "rating": 0.92,
-        "adr": 70,
-        "kpr": 0.62,
-        "nades_pr": 2.0
-      }
-    }
+  "awp": {
+   "label": "Снайпер",
+   "baseline": {
+    "opening_attempt_rate": 0.26,
+    "opening_win_pct": 58,
+    "hs_pct": 25,
+    "survival_pct": 40,
+    "util_dmg_pr": 3,
+    "nades_pr": 1.0
+   }
   },
-  "reference_players": [
-    {
-      "name": "jame",
-      "stats": null,
-      "note": "заполняется из его демок через tools/build_meta.py --player jame"
-    },
-    {
-      "name": "jerry",
-      "stats": null,
-      "note": "заполняется из его демок через tools/build_meta.py --player jerry"
-    }
-  ],
-  "maps": {}
+  "support": {
+   "label": "Саппорт",
+   "baseline": {
+    "util_dmg_pr": 9,
+    "nades_pr": 2.2,
+    "enemies_flashed_pr": 0.5,
+    "opening_attempt_rate": 0.15
+   }
+  },
+  "lurker": {
+   "label": "Люркер",
+   "baseline": {
+    "traded_death_pct": 12,
+    "survival_pct": 38,
+    "opening_attempt_rate": 0.16,
+    "early_death_pct": 10
+   }
+  },
+  "igl": {
+   "label": "Капитан",
+   "baseline": {
+    "rating": 0.92,
+    "adr": 70,
+    "kpr": 0.62,
+    "nades_pr": 2.0
+   }
+  }
+ },
+ "reference_players": [],
+ "maps": {},
+ "macro": {
+  "version": "2026.10-v0",
+  "note": "Приблизительный стартовый эталон команд tier-1. Пересоберите по про-демкам (Роли → Собрать библиотеку).",
+  "baseline": {
+   "round_win_pct": 50,
+   "opening_conversion": 70,
+   "adv_conversion": 75,
+   "comeback_pct": 28,
+   "team_traded_pct": 22,
+   "team_nades_pr": 7,
+   "nades_before_contact": 2,
+   "team_flashed_pr": 1.6,
+   "pistol_win_pct": 50,
+   "eco_win_pct": 12,
+   "force_win_pct": 30,
+   "full_win_pct": 55,
+   "plant_rate": 55,
+   "retake_win_pct": 30
+  },
+  "igl_profiles": {
+   "apEX": null,
+   "karrigan": null,
+   "FalleN": null,
+   "Aleksib": null,
+   "jame": null
+  }
+ }
 }
